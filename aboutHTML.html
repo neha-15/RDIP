@@ -1,0 +1,89 @@
+<html>
+<head>
+<style>
+.mydiv {
+  border: 5px outset red;
+  background-color: lightblue;
+  text-align: center;
+}
+</style>
+<script>
+/*let test=document.getElementById("test");
+test.addEventListener("mouseenter",function(event)){
+  event.target.style.color="purple";
+  setTimeout(function()){
+    event.target.style.color="";
+  },500);
+},false);*/
+  //var d=new Date();
+  //console.log(d);
+  function displayDate(){
+    document.write(Date());
+  }
+function fib()
+{
+var a=0;
+var b=1;
+var c,i;
+var output;
+var n=Number(document.getElementById("n").value);
+output=a+" "+b+" ";
+for(i=1;i<=n;i++)
+{
+c=a+b;
+output=output+c+" ";
+a=b;
+b=c;
+}
+document.getElementById("ar").value=output;
+}
+function range()
+{
+  var output;
+ var x=Number(document.getElementById("x").value); 
+if(x>=10 && x<=100)
+{
+  output="in the given range";
+  document.getElementById("ar").value=output;
+}
+try{
+  output="not in range";
+  if(x==""){
+    throw "empty";
+  }
+}
+  catch(err){
+    document.getElementById("ar").value=" "+err;
+  }
+}
+var str="HTML is the standard markup language for creating web pages.HTML stands for hyper text markup language.A markup language is set of markup tags.HTML documents are described by HTML tags.Each HTML tag describes different document content and these tags are not case sensitive."
+var res=str.substr(20,8);
+console.log(res);
+</script>
+</head>
+<body>
+<div class="mydiv">
+<h3>HYPER TEXT MARKUP LANGUAGE</h3>
+<p>HTML is the standard markup language for creating web pages.
+HTML stands for hyper text markup language.A markup language is set of markup tags.
+HTML documents are described by HTML tags.Each HTML tag describes different document content and these tags are not case sensitive.
+</p>
+</div>
+HTML document contains two parts<ol type="1" id="test">
+<li>Head Section(includes title of web page)</li>
+<li>Body Section(body of program)</li>
+</ol>
+<h4>Some Of The Basic Tags Are</h4>
+<ol type="1">
+<li>b tag:defines bold text</li>
+</ol>
+<button onmouseover="displayDate()">want to know time</button><br>
+Enter value:<input type="text" id="n"><br>
+<button type="button"  ondblclick="fib()">fibonacci</button><br>
+Enter value:<input type="text" id="x"><br>
+<button type="button"  onclick="range()">Range</button><br>
+output:
+<br>
+<textarea name="s" id="ar" rows="5" cols="40"></textarea>
+</body>
+</html>
