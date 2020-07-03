@@ -2,7 +2,11 @@
 <html>
     <head>
         <title>Homepage</title>
-        <style>
+         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!--<style>
             *{
             box-sizing:border-box;
             margin:0;
@@ -78,28 +82,83 @@
             padding-top:50px;
             padding-left:80px;
         }
-        </style>
+        </style>-->
     </head>
 <body>
-    <h2><center>HOME PAGE</center></h2>
+   <!-- <h2><center>HOME PAGE</center></h2>
     <div class="rdl" align="right">
         <a href="https://serc.iiit.ac.in/rdip/">RDIP</a>
     </div>
     <a href="https://www.iiit.ac.in/">
     <img src="https://www.iiit.ac.in/img/iiit-new.png" width:"300" height="100"/>
-    </a>
-<header>
-    <nav>
-        <ul class="nav_links">
+    </a>-->
+    <div class="header">
+    <nav class="navbar navbar-style">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a href="https://www.iiit.ac.in/"><img class="logo" src="https://www.iiit.ac.in/img/iiit-new.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="icon">
+        <ul class="nav navbar-nav navbar-right">
             <li><a href="homepage.html">Home</a></li>
             <li><a href="registration.html">Registration Form</a></li>
+            <li><a href="https://serc.iiit.ac.in/rdip/">RDIP</a></li>
         </ul>
+        </div>
+        </div>
     </nav>
-</header>
-<div class="info">
-    <h3>My Details:</h3>
+
+<div class="container">
+<div class="row">
+    <div class="col-sm-6 banner-info">
+        <h3>My Details:</h3>
+        <table style="width:50%" class="table table-hover" id="tab">
+    <tr>
+        <td>Name</td>
+        <td>Ravuri Neha Sindhuja</td>
+    </tr>
+    <tr>
+        <td>college</td>
+        <td>Vignan's University</td>
+    </tr>
+    <tr>
+        <td>Reason</td>
+        <td>To improve my knowledge of coding and problem solving ability</td>
+    </tr>
+    </table>
     </div>
-    <div class="tab">
+    <div class="col-sm-6 banner-image">
+        <img src="http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s640/facebook-default-no-profile-pic.jpg" width:"300" height="100" 
+style="float:right"/>
+    </div>
+    </div>
+    </div>
+<div class="col-sm-6 banner-info">
+    <p>RDIP isRemote Digital Internship Program to help students learn/improve HTML,CSS,JavaScript</p>
+<button id="hider">Hide</button>
+<button id="shower">Show</button>
+<div>
+<p id="para">In the first week of internship I have learned how to work with github and push,pull requsts.Improved my knowledge about HTML,CSS and
+worked with different types of tags and styles</p> 
+</div>
+</div>
+<script>
+$( "#hider" ).click(function() {
+  $( "#para" ).hide( "fast", function() {
+    $( this ).prev().hide( "fast", arguments.callee );
+  });
+});
+$( "#shower" ).click(function() {
+  $( "#para" ).show( 2000 );
+});
+</script>
+
+    <!--<h3>My Details:</h3>
     <table style="width:50%">
     <tr>
         <td>Name</td>
@@ -114,17 +173,17 @@
         <td>To improve my knowledge of coding and problem solving ability</td>
     </tr>
     </table>
-</div>
+    </div>
 <div class="imag">
 <img src="http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s640/facebook-default-no-profile-pic.jpg" width:"300" height="100" 
 style="float:right"/>
-</div>
-<div class="p">
+</div>-->
+<!--<div class="p">
 <p>RDIP isRemote Digital Internship Program to help students learn/improve HTML,CSS,JavaScript</p>
 </div>
 <div class="pa">
 <p>In the first week of internship I have learned how to work with github and push,pull requsts.Improved my knowledge about HTML,CSS and
 worked with different types of tags and styles</p> 
-</div>
+</div>-->
 </body>
 </html>
