@@ -5,93 +5,9 @@
          <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <!--<style>
-            *{
-            box-sizing:border-box;
-            margin:0;
-            padding:0;
-        }
-        li,a{
-            font-family:"Arial",sans-serif;
-            font-weight:500;
-            font-size:16px;
-            color:#edf0f1;
-            text-decoration:none;
-        }
-        header{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:15px 10%;  
-            box-sizing:border-box;
-            border-radius:15px;
-            background-color:#24252A;    
-        }
-        .nav_links{
-            list-styles:none;
-        }
-        .nav_links li{
-            float:left;
-            margin-left:0px;
-            display:inline-block;
-            padding:0px 20px;
-        }
-        .nav_links li a{
-            transition:all 0.3sec ease 0s;
-        }
-        .nav_links li a:hover{
-            color:#0088a9;
-        }
-        img{
-            cursor:pointer;
-
-        }
-        .rdl a{
-            color:blue;
-            padding-top:50px;
-        }
-         table,td {
-        border: 1px solid black;
-        outline-style:solid;
-        border-radius:10px;
-        border-collapse: collapse;
-        }
-        td {
-            padding: 15px;
-            text-align:center;
-        }
-        .imag img{
-            position:absolute;
-            top:250px;
-            right:16px;
-        }
-        .info{
-            padding-top:50px;
-            padding-left:80px;
-        }
-        .p{
-            padding-top:50px;
-            padding-left:80px;
-        }
-        .tab{
-            padding-top:50px;
-            padding-left:80px;
-        }
-        .pa{
-            padding-top:50px;
-            padding-left:80px;
-        }
-        </style>-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
     </head>
-<body>
-   <!-- <h2><center>HOME PAGE</center></h2>
-    <div class="rdl" align="right">
-        <a href="https://serc.iiit.ac.in/rdip/">RDIP</a>
-    </div>
-    <a href="https://www.iiit.ac.in/">
-    <img src="https://www.iiit.ac.in/img/iiit-new.png" width:"300" height="100"/>
-    </a>-->
+<body>  
     <div class="header">
     <nav class="navbar navbar-style">
         <div class="container">
@@ -112,7 +28,6 @@
         </div>
         </div>
     </nav>
-
 <div class="container">
 <div class="row">
     <div class="col-sm-6 banner-info">
@@ -139,14 +54,19 @@ style="float:right"/>
     </div>
     </div>
 <div class="col-sm-6 banner-info">
-    <p>RDIP isRemote Digital Internship Program to help students learn/improve HTML,CSS,JavaScript</p>
-<button id="hider">Hide</button>
-<button id="shower">Show</button>
+  <div id="par" > <p class="bg-primary text-white">RDIP isRemote Digital Internship Program to help students learn/improve HTML,CSS,JavaScript</p></div>
+  <button id="fadeout">FadeOUT</button>
+  <button id="fadein">FadeIN</button>
+  <button id="fadetoggle">FadeToggle</button>
+  <button id="fadeto">FadeTo</button>
 <div>
 <p id="para">In the first week of internship I have learned how to work with github and push,pull requsts.Improved my knowledge about HTML,CSS and
 worked with different types of tags and styles</p> 
 </div>
+<button id="hider">Hide</button>
+<button id="shower">Show</button>
 </div>
+<button>Send an HTTP GET request to a page and get the result back</button>
 <script>
 $( "#hider" ).click(function() {
   $( "#para" ).hide( "fast", function() {
@@ -156,34 +76,33 @@ $( "#hider" ).click(function() {
 $( "#shower" ).click(function() {
   $( "#para" ).show( 2000 );
 });
+$(document).ready(function(){
+    $('#fadeout').click(function(){
+        $('#tab').fadeOut(3000);
+    });
+});
+$(document).ready(function(){
+    $('#fadein').click(function(){
+        $('#tab').fadeIn(5000);
+    });
+});
+$(document).ready(function(){
+    $('#fadetoggle').click(function(){
+        $('#tab').fadeToggle("slow");
+    });
+});
+$(document).ready(function(){
+    $('#fadeto').click(function(){
+        $('#tab').fadeTo(3000,0.2);
+    });
+});
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("a.asp", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
 </script>
-
-    <!--<h3>My Details:</h3>
-    <table style="width:50%">
-    <tr>
-        <td>Name</td>
-        <td>Ravuri Neha Sindhuja</td>
-    </tr>
-    <tr>
-        <td>college</td>
-        <td>Vignan's University</td>
-    </tr>
-    <tr>
-        <td>Reason</td>
-        <td>To improve my knowledge of coding and problem solving ability</td>
-    </tr>
-    </table>
-    </div>
-<div class="imag">
-<img src="http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s640/facebook-default-no-profile-pic.jpg" width:"300" height="100" 
-style="float:right"/>
-</div>-->
-<!--<div class="p">
-<p>RDIP isRemote Digital Internship Program to help students learn/improve HTML,CSS,JavaScript</p>
-</div>
-<div class="pa">
-<p>In the first week of internship I have learned how to work with github and push,pull requsts.Improved my knowledge about HTML,CSS and
-worked with different types of tags and styles</p> 
-</div>-->
 </body>
 </html>
