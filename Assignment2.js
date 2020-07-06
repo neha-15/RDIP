@@ -154,8 +154,10 @@ function anag() {
 function random() {
     num1 = Math.floor(Math.random() * 1000) + 1;
     document.getElementById("p").value = num1;
+    alert(num1);
     num2 = Math.floor(Math.random() * 1000) + 1;
     document.getElementById("r").value = num2;
+    alert(num2);
     mod1 = num1 % 10;
     mod2 = num2 % 10;
     alert("mod1 is" + mod1);
