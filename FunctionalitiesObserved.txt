@@ -1,0 +1,10 @@
+*A dropdown list to select language.
+*The list contains two languages Hindi and English.
+*when we select a language a set of jumbled words will be provided.
+*when we click the word the selected words will be displayed under formed sentence.
+*A Re-form the sentence button will also be displayed on clicking this button we will be allowed to re arrange the words.
+*After arranging all the words a button to check the correctness will be displayed.
+*On clicking it we will be notified whether it is right or wrong'
+*If the formed sentence is correct a right answer message will be displayed.
+*If it is wrong a button to get correct sentence will be displayed.
+*On clicking it we will be given with a set of correct sentences.
